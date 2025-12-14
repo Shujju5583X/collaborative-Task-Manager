@@ -119,6 +119,8 @@ collaborative-task-manager/
 
 ## 🚀 Getting Started
 
+> **Deploying to Production?** See our [DEPLOYMENT.md](./DEPLOYMENT.md) guide for deploying to Netlify and Render.
+
 ### Prerequisites
 
 - **Node.js**: v18 or higher
@@ -223,6 +225,35 @@ cd client
 npm run build       # Build optimized production bundle
 npm run preview     # Preview the production build locally
 ```
+
+## 🌐 Deployment
+
+This application can be deployed to production using modern hosting platforms.
+
+### Quick Deploy
+
+- **Frontend (Netlify)**: [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
+- **Backend (Render)**: [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+### Deployment Guide
+
+For detailed deployment instructions, see **[DEPLOYMENT.md](./DEPLOYMENT.md)**, which includes:
+
+- Step-by-step backend deployment to Render
+- Frontend deployment to Netlify
+- Environment variable configuration
+- Database setup
+- Troubleshooting common issues
+- Post-deployment testing
+
+### Live Demo
+
+Once deployed, you can access:
+
+- **Frontend**: `https://your-app.netlify.app`
+- **Backend API**: `https://your-app.onrender.com/api`
+
+> **Note**: Update these URLs after your deployment is complete.
 
 ## 📡 API Endpoints
 

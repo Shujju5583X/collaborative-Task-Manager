@@ -56,7 +56,7 @@ export const taskController = {
         }
     },
 
-    async getOverdue(req: Request, res: Response, next: NextFunction): Promise<void> {
+    async getOverdue(_req: Request, res: Response, next: NextFunction): Promise<void> {
         try {
             const tasks = await taskService.getOverdueTasks();
 

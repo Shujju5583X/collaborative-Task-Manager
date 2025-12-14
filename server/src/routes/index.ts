@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import authRoutes from './authRoutes';
 import taskRoutes from './taskRoutes';
 
@@ -8,7 +8,7 @@ router.use('/auth', authRoutes);
 router.use('/tasks', taskRoutes);
 
 // Health check
-router.get('/health', (_req, res) => {
+router.get('/health', (_req: Request, res: Response) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 

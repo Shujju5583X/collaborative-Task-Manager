@@ -61,9 +61,11 @@ This guide walks you through deploying the Collaborative Task Manager applicatio
 
 2. **Configure Build & Start Commands**
    ```
-   Build Command: npm install && npx prisma generate && npm run build
+   Build Command: npm install --production=false && npx prisma generate && npm run build
    Start Command: npx prisma migrate deploy && npm start
    ```
+   
+   > **Important**: The `--production=false` flag ensures TypeScript and other devDependencies are installed for the build process.
 
 3. **Set Environment Variables**
    

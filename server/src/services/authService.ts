@@ -66,14 +66,15 @@ export const authService = {
     },
 
     generateToken(payload: IAuthPayload): string {
-        return jwt.sign(payload, JWT_SECRET, {
-            expiresIn: JWT_EXPIRES_IN,
+        const expiresIn = JWT_EXPIRES_IN;
+        return jwt.sign(payload, JWT_SECRET as jwt.Secret, {
+            expiresIn: expiresIn as jwt.SignOptions['expiresIn'],
         });
     },
 
     verifyToken(token: string): IAuthPayload {
         try {
-            const decoded = jwt.verify(token, JWT_SECRET) as IAuthPayload;
+            const decoded = jwt.verify(token, JWT_SECRET as string) as IAuthPayload;
             return decoded;
         } catch {
             throw new UnauthorizedError('Invalid or expired token');
